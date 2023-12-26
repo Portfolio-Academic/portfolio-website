@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    {{ partial "head.html" . }}
-
-    {{ partial "head_custom.html" . }}
-
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <!-- Google Analytics (Replace with your actual Google Analytics ID) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GOOGLE_ANALYTICS_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'YOUR_GOOGLE_ANALYTICS_ID');
+    </script>
+    <!-- End Google Analytics -->
+    <title>Your Site Title Here</title>
+    <style>
+      /* CSS styles here - same as provided in your Hugo template */
+    </style>
+    <!-- Include additional CSS files as needed -->
+    <link rel="stylesheet" href="path/to/your/cssfile.css"/>
 </head>
-
 <body>
-
-	{{ partial "header.html" . }}
-
-	{{ range .Site.Params.sections }}
-	{{ partial . $ }}
-	{{ end }}
-
-	{{ partial "footer.html" . }}
-  {{ partial "base-foot.html" . }}
-  
+    <!-- Your body content will go here -->
 </body>
-
 </html>
-<!-- endinject -->
