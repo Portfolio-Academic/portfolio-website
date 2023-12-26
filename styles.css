@@ -1,7 +1,8 @@
 /* Reset some default styles */
-body, h1, h2, h3, p, ul {
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /* Basic styling */
@@ -45,8 +46,21 @@ nav {
     background-color: #555;
 }
 
-section {
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 50px 10%;
+}
+
+.flex-container > div {
+    flex-basis: 50%;
+}
+
+.flex-container img {
+    max-width: 50%;
+    height: auto;
+    border: 3px solid #333; /* Optional border for visual separation */
 }
 
 button {
